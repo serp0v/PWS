@@ -1,0 +1,282 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+html, body {
+    width: 100%;
+}
+body {
+    color: white;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    background-color: rgb(0, 0, 0);
+}
+.header-wrap {
+    height: 50px;
+    border-bottom: 2px solid #404040;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #1f1f1f;
+}
+.header-cont{
+    height: 22px;
+    width: 1200px;
+    /* min-width: 594px; */
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+.off > a {
+    display: none;
+}
+.off > p {
+    display: none;
+}
+.main-wrap {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.main-cont {
+    display: flex;
+    width: 1200px;
+    /* padding-left: 30px;
+    padding-right: 30px; */
+    margin: 0 auto;
+    flex-direction: column;
+    height: calc(100vh - 52px);
+}
+.pe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+}
+.logo {
+    display: flex;
+    height: 100%;
+    /* padding: 0 5px; */
+    align-items: center;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 2px;
+    /* border: 1px solid #404040; */
+    margin-right: 30px;
+    float: left;
+    margin-top: -14px;
+}
+.registration {
+    display: flex;
+    height: 22px;
+    width: 159px;
+    margin-right: 30px;
+    float: right;
+}
+.logIn {
+    display: flex;
+    height: 22px;
+    width: 80px;
+    float: right;
+}
+[class$="-link"] {
+    border: 1px solid #fff;
+    font-weight: 700;
+    border-radius: 2px;
+    font-size: 100px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    color:white;
+    font-size: 0.75rem;
+    -webkit-transition: all 700ms cubic-bezier(0.4,0,0.2,1) 0ms;
+    transition: all 700ms cubic-bezier(0.4,0,0.2,1) 0ms;
+    cursor: pointer;
+    white-space: nowrap;
+}
+[class$="-link"]:hover {
+    border: 1px solid #404040;
+}
+.burger {
+    display: flex;
+    float: left;
+    margin-right: 30px;
+}
+.docks {
+    display: flex;
+    float: right;
+    width: 200px;
+
+}
+.toplink {
+    position: relative;
+    top: 0;
+
+}
+#logbtn {
+    display: flex;
+    height: 20px;
+    width: 80px;
+    border: 1px solid #404040;
+    position: relative;
+}
+/* slider */
+/* .slider {
+    display: flex;
+    height: 247px;
+    width: 741px;
+    flex-direction: row;
+    margin: auto auto;
+    overflow: hidden;
+    align-items: center;
+} */
+.youareget-grid {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 200px;
+    max-width: 1200px;
+    /* top: 40%; */
+    cursor: pointer;
+}
+.youareget-grid__item {
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    flex-direction:column;
+}
+.grid-svg {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+.grid-item-title {
+    height: 30px;
+    width: 100%;
+    /* align-items: end; */
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+.grid-description {
+    height: 60px;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 100;
+    font-size: 14px;
+    color: #404040;
+    filter: brightness(300%);
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+.svg-center {
+    /* border: 1px solid rgb(255, 255, 255); */
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    fill:#fff;
+}
+.slogan {
+    display: flex;
+    width: 800px;
+    height: 220px;
+    font-size: 48px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.nabor {
+    padding-top: 60px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    width: 700px;
+    text-decoration: none;
+}
